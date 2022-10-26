@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.digit, .operator {
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: large;
+    transition: ease-in-out 100ms;
+}
+
+.digit:hover, .operator:hover {
+    background-color: coral;
+}

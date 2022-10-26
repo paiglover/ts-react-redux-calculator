@@ -1,0 +1,26 @@
+1. Create redux store with { configureStore }
+    To create the store, create the file app/store.
+    import { configureStore } from redux toolkit.
+    export it as default and temporary, use a reducer object as argument.
+
+2. Provide the store to your app
+    On your app's entry point (index.js) import { Provider } from "react-redux", wrap your
+    entire application on the <Provider> component and pass the store as store prop.
+
+3. Create a redux slice reducer with createSlice
+    On this slices, we define either the initial state, as well as the reducers.
+    we export a const with the name of our slice, asigned to a call to the function
+    createSlice with an object as argument that contains a name, an initial state and the reducers.
+
+    We asign each reducer to an arrow function that uses the state as argument and returns
+    the desired modified state
+            reducers: { increment: (state) => { ++state.count } }
+    Once the slice created, export the reducers as slice.actions
+    const { reducer1, reducer2 } = slice.actions 
+    and the reducer object: slice.reducer
+
+4. Use useSelector/useDispatch hooks
+    On your app, import useSelector & useDispatch hooks.
+    asign the piece of state you need to useSelector((state) => state.theStateYouNeed)
+
+    Asign dispatch to useDispatch(); and now you'll be able to dispatch whatever you need.
